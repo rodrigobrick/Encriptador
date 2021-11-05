@@ -1,0 +1,255 @@
+
+
+
+Mensaje original: Os
+Modulo que proporciona funciones para interactuar con el sistema operativo, este módulo facilita una forma portátil de utilizar la funcionalidad dependiente del sistema operativo.
+El módulo Os.path es un submódulo del módulo OS en Python. El método join() concatena varios componentes de la ruta con un separador de directorio.
+
+Pyinstaller
+Módulo de Python multiplataforma que sirve para empaquetar los archivos de Python para dejar un ejecutable según el sistema operativo en el que se ejecute.
+Ya que funciona en varios sistemas operativos, carga las bibliotecas necesarias para poder garantizar una compatibilidad total. 
+
+Diseno de arquitectura
+
+Para llevar el control de las solicitudes del usuario, tanto para codificar o decodificar se utilizará el modelo vista controlador, el cual se ejemplifica en lo siguiente:
+Vista: es la interfaz gráfica del usuario, donde este mismo interactúa con el programa. En esta parte se observa todo lo necesario para que ingresar el mensaje a encriptar o desencriptar, según el caso que se necesite.
+
+Modelo: en esta parte están ubicadas las funciones para encriptar, desencriptar o mostrar el registro de todo lo realizado anteriormente.
+
+Controlador: es la parte encargada de comunicar a la vista con el modelo, donde se capturan las acciones como presionar un botón en la vista y que esto tenga una consecuencia en el modelo.
+
+La arquitectura del programa permitirá su correcto funcionamiento según las indicaciones del usuario, esto se basa en el siguiente diagrama.
+
+Opcion utilizada: ENCRIPTAR
+Metodo utilizado: AES
+Llave utilizada: estoyestresado
+Mensaje final: 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
+Tiempo transcurrido: 0.004000425338745117 segundos
+
+     
+
+
+Mensaje original: gYZ0uddfe1J35+wVF5zVkzlN2BY5Zkmv4dAi15DkJ+0DtGThGf5ChW+dK1NkcIEYcBWDDgTFNzIaIiXKl4Y45i1FyuZZqfDM0Lg63ZcWtMvtR3k0TjixvePQ6dPJJvB2yUA21fp+rToIpM7pOP62AKGJl0Adcu8FO51BAz7F77wf22TUfq3LW/KrvlKU4c89mUaGp2yEOL3/42LRWHcCSYeGFX6XXq+2GpVyGLDdauL+g2E+EWbU8sTA8cRvv3kPoipcmITjhYYRRJxSZQMv/uZWsVDn6+8cCLIKIRtTAZLbtWQRO6YzgPyVmljvAUhc59GXLV7ZrF3ReowgtQ2h8dq0d/qW7BNHTvQ/3KlhV8ek75on6DDvgO7axb8CyQFZMfDeU2zZgrJ6vvpkcS1evZ4I0Pm2yeDiwDTcwssEQodQ5d1YWo86yGdfzujFeTsiKLrTtL8c4tW+eaYzJ6xwEwTvHSHG6cdlSOPntUHpWh6amNz9w0sdBzUEwrvLprtKBBj7anTBiCc/SO0BZK5wO9iv0aiB29I8pLc9l7STRCkEDV3VOeqlxrEEdQc5jXKJfDv2zC3SPtgtSL8y8/eEw4umdSjzWmLswrX1dDOo2gtLBAicvLXuZxuB26QsAIIzLzjMa+mtEUfIIt8Up54gdL4AITXDk8jGziEbm3HXnw3toV9dS2Mi8PsgqnrPXmX4N7xEDdlK0h4EWrF9l82m0UlI1ktAmkW4ewitHiznVbn0iyMSoP6E9gn9EK4urPZvCkOSjhBvFLxjhO8MJKr7f7SUW3US7m7u90QNH1+zF4/hc1hXjHgnEdcNGM8Bd2ZFTBldFujE2rJI7w/Pluo0+LmKRSBRQR7vpJ1QT0JcU38ceQ/xqJxdVgaHy+GqKhUgpcGWc/6YcKgdJULMYoVWDV2YYsDCx23Oin+Cq+yV6jpM7j16aq6/xsfEq3f935e8aXX/VcKGjcBB44p7oTstjGjz6B81VPCA+2Fg/ZJGkBQTJKn8WT6OfAsKwClg0iaAElOjZ72EfFRwmtc813Ad//qFj8pjCbj0li3JX7uHINUI/Zlwq0tGvnbTaD0DRveu9VFwZDpQnnKU1mm5+kXUlb5WzoyPppAe+52kUnBSszWnKvGTsEURG74KyCaipOf/j+nqYs66uO3j5wRIWiMwEg0qSD6inoi1QzrwDsFqzyb9YupltdqyNHV93DRp1Mutm1EpVDcCb7+oewCHedv8SYjOhdcSGP7HjZF18VAAwjdGWWqbxKLPVibyyT5o8coJlOjP1t3zsASgGjWViXIy4xNNWBmn40f0kdeu2v03Wyk8syLBGeCE11K7kLQrsc4QGgXnaNNUvF/P/pKGr32MGvKwhx/EP4PMqhYGqmyF9mIOCNCZN4Zb+Yxk/BxsOxrT+rhny9cH4ApL6ecTXcD6kUN/jinXKWnWF8XoSUyPF3s1gBL+TbKeQdXKXOgqLo9eOVwTwvdk55OLY3EBzmo6fImn7Pc8BcESPqjgobllT6C6DhT7tKUWcVfULbeYsL2wQ9naRX6E63I1pHnsvfioUvCYroh1ZGk7qfOxNrZwnZc57aCQ4PVbMCXY8rUrc1E1wPW6DfgMSI0JHeK/rd2mE70qfpa12rwWl3+JVacpmMY959QhIuzd0+DhwmllIQk8wy5fWNFXHv0QJDTdnyt7YtZj55WFq3GSNaQGw1eY1SJ+uaTfLxBCR2T/gDR2rWL6bPAV+QeG46ephUtKhXOnsMuYsq0/W68lXtk+TYmQF/HfqUmgakxHvBcPlYHaKp2to7HTv5Sk1vZD2Bzp6fYXphLCXxIMM7cTIxLoEVm9kLLwqGikkqFQuvcB67K7wecTQNRCmSMy48Zva0tGQvDspYa6qUJ/3/pL1JFEKk6LSGiwIiVHTBHL7L937mi1k4djM6nLM/803oyI8bWKjhOZ3bDFYoe96Rjij/05s+i/rp1kJG0LFONJWuIx+zAquTNUb5mLxDkKNAhn2PdaELqw2HjaOyo41vtHM+8nJ+ZVTaloLGQGezQed870YSX5EovA2iEIhVDgLFVDwFx5Z11q2Q==
+Opcion utilizada: DESENCRIPTAR
+Metodo utilizado: AES
+Llave utilizada: estoyestresado
+Mensaje final: Os
+Modulo que proporciona funciones para interactuar con el sistema operativo, este módulo facilita una forma portátil de utilizar la funcionalidad dependiente del sistema operativo.
+El módulo Os.path es un submódulo del módulo OS en Python. El método join() concatena varios componentes de la ruta con un separador de directorio.
+
+Pyinstaller
+Módulo de Python multiplataforma que sirve para empaquetar los archivos de Python para dejar un ejecutable según el sistema operativo en el que se ejecute.
+Ya que funciona en varios sistemas operativos, carga las bibliotecas necesarias para poder garantizar una compatibilidad total. 
+
+Diseno de arquitectura
+
+Para llevar el control de las solicitudes del usuario, tanto para codificar o decodificar se utilizará el modelo vista controlador, el cual se ejemplifica en lo siguiente:
+Vista: es la interfaz gráfica del usuario, donde este mismo interactúa con el programa. En esta parte se observa todo lo necesario para que ingresar el mensaje a encriptar o desencriptar, según el caso que se necesite.
+
+Modelo: en esta parte están ubicadas las funciones para encriptar, desencriptar o mostrar el registro de todo lo realizado anteriormente.
+
+Controlador: es la parte encargada de comunicar a la vista con el modelo, donde se capturan las acciones como presionar un botón en la vista y que esto tenga una consecuencia en el modelo.
+
+La arquitectura del programa permitirá su correcto funcionamiento según las indicaciones del usuario, esto se basa en el siguiente diagrama.
+
+Tiempo transcurrido: 0.22280526161193848 segundos
+
+     
+
+
+Mensaje original: Is this the real life?
+Is this just fantasy?
+Caught in a landside,
+No escape from reality
+Open your eyes,
+Look up to the skies and see,
+I'm just a poor boy, I need no sympathy,
+Because I'm easy come, easy go,
+Little high, little low,
+Any way the wind blows doesn't really matter to
+Me, to me
+Mamaaa,
+Just killed a man,
+Put a gun against his head, pulled my trigger,
+Now he's dead
+Mamaaa, life had just begun,
+But now I've gone and thrown it all away
+Mama, oooh,
+Didn't mean to make you cry,
+If I'm not back again this time tomorrow,
+Carry on, carry on as if nothing really matters
+Too late, my time has come,
+Sends shivers down my spine, body's aching all
+The time
+Goodbye, everybody, I've got to go,
+Gotta leave you all behind and face the truth
+Mama, oooh
+I don't want to die,
+I sometimes wish I'd never been born at all.
+I see a little silhouetto of a man,
+Scaramouch, Scaramouch, will you do the Fandango!
+Thunderbolts and lightning, very, very frightening me
+Galileo, Galileo
+Galileo, Galileo
+Galileo, Figaro - magnificoo
+I'm just a poor boy nobody loves me
+He's just a poor boy from a poor family,
+Spare him his life from this monstrosity
+Easy come, easy go, will you let me go
+Bismillah! No, we will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let me go) Will not let you go
+(Let me go)(Never) Never let you go
+(Let me go) (Never) let you go (Let me go) Ah
+No, no, no, no, no, no, no
+Oh mama mia, mama mia, mama mia, let me go
+Beelzebub has a devil put aside for me, for me,
+For meee
+So you think you can stop me and spit in my eye
+So you think you can love me and leave me to die
+Oh, baby, can't do this to me, baby,
+Just gotta get out, just gotta get right outta here
+Nothing really matters, Anyone can see,
+Nothing really matters,
+Nothing really matters to me
+Any way the wind blows...
+Opcion utilizada: ENCRIPTAR
+Metodo utilizado: DES
+Llave utilizada: ingenier
+Mensaje final: b'\x0c\xc2\x85\xc2\x82J\xc3\x91\xc2\xb8h\xc2\x91\x0b\x1a\xc3\xa9\xc3\x8brt\xc2\xba\x02\xc3\x99\xc3\xa4\xc3\x8c\xc2\x93\xc3\x95\xc3\xb52%\xc3\x83\x00P_\xc3\xa7\x16\xc2\x84-uaQ:\xc3\x94\xc2\xb5Z2z\xc2\x93\xc2\x85\xc2\x8c\xc2\xb8\n*\x04f\x01\xc3\xa98\x16\x16\x1e\xc2\x8a\x0bO\xc3\x89N\xc3\xb9at\xc2\xa3%\xc2\xbf@\x1f\x0c~\xc3\xb6\xc2\xaa;\xc3\x92\xc3\xa2\xc3\x9f\x18\xc2\x80C\xc3\x93\xc2\xaa\tWZG\x15T\xc2\xb2\xc3\x97\xc3\x97\xc3\x82\xc2\x9a\xc2\x98b<;\xc3\x8c\xc3\xaf$;]C\x08B\xc2\x8f\xc3\x92%d\t\x04\x1e\x0c\xc2\xb7\xc2\xbeSf~\xc2\xa0\x01\xc3\x83W\xc2\x92x\xc3\xb2\xc2\xb8\xc3\xb9["8\xc2\x95\xc2\xae\xc2\x8d\x16\n\xc3\x8eU\x13\xc2\x8b\\E\xc3\xad\xc3\xa3~\xc2\x8cAQ\r\xc3\xa6\xc3\x89\x10K>\xc3\x9a\xc3\x93\xc2\x86uz\xc2\x8f\xc2\xb8\xc2\xb9\xc3\x84-\xc2\xaaQ\xc2\x93H\xc2\x97\xc3\xb2\x08\xc2\xb6\xc2\xa9\xc3\x96\xc3\x99Az\xc3\xa2\xc3\x81;"\xc3\xadL&\n\x12\xc3\xa0\xc2\xb8s\xc3\x88\x18\xc2\x81\'\xc3\x93\x01B\xc3\x8fE3\xc2\x8b\n\xc3\xa51\x7f\xc3\xb2\x00-h\xc2\x8f4\x1fCk\xc3\xb9\xc3\x982\xc3\xa4/\xc3\x8f\xc3\xab\xc2\x82\xc3\x99\xc3\xb0\xc3\x92\xc3\x9c\xc2\x8f\xc2\xa9&\xc2\x8c\xc2\xbe\xc3\x8d\x15\xc2\xbe\xc3\xa6\r\xc3\x87\x1b\xc2\x98\xc2\xae\xc3\xbf\xc2\xb0\x11\xc3\xaf{\xc3\x9f\xc3\xaeX\xc3\xac\xc2\x9e\xc2\xb4K\xc2\x9d\x18\xc3\xae\x1cq\xc3\x93\xc3\x95\xc3\xaa\xc2\xae\x06\xc2\x86\xc2\x9ex\xc3\xb2\xc2\xaa\xc2\xac\xc3\x9c\xc2\x9d`\x1a{\xc3\xa7\xc3\x8e`\x0c.\xc2\xb8\xc2\xa7\xc2\x83\xc2\xb5?5-\xc3\xb1\xc2\xa0\xc2\x9cs(\xc3\x88b\xc3\x8c\xc2\xb2t\x15\xc3\xb2\xc2\xb9Z\xc2\xb5\xc3\xb0V\xc3\x95#\xc3\x93vX^\xc3\xa6\xc3\xbds\x16\xc2\x98aP`\xc2\xb1;\xc2\xab\xc2\xa8\xc2\xa3\xc3\x87z\xc3\x9d&\xc3\x9fCk\x11\xc2\xad0\xc3\xab\xc3\x95\x00|\xc3\x85\xc2\xa9\xc3\xbf\x1d\xc3\xa8Lu\xc2\x8f\xc2\x82\xc2\x8a\xc2\xabf1\xc2\xa1\xc2\xba\xc3\x9b\xc2\x9d\xc3\x88ht;\x1c\xc2\x91A\xc3\x91\xc3\xb8#\\\xc2\x9a%\xc2\xb1!t\xc3\x96\xc3\x9e5\xc3\xa2\xc3\x96\xc2\x8d6\xc2\x8fM\xc3\x94\x18j\xc2\x9d\xc2\x8b\x07\x00c\xc2\xaeM\x1b\xc2\xb2N8\xc2\x90\xc3\xbc\xc2\x9d\xc3\xad\xc2\x8f\xc2\x9e\x1c\xc3\x88``6o\xc3\x92kJ<\x12\r\xc2\xaaf\xc2\x97\xc2\x81t\xc3\xa6\xc2\xb2`\x19=\x1bl\xc3\xbd\xc3\x8dY\xc3\xbdN7\xc3\xbe.a\xc2\x83\xc3\xbc\xc3\x9b\xc3\xb3\xc2\xb1\x18e"\xc3\xbb{\xc3\xa5\xc3\xbdq\xc3\xa2e+9\xc2\x9bO"\xc3\x8b\x1c\xc3\xb5_\xc3\x97\xc3\xa7\x17b\xc3\x80*<\xc2\x8b"\xc2\xbb\n=\xc2\xaf"\xc3\xad\xc2\xa8k|\xc3\xa5\xc2\x9d\xc3\x81\xc3\xac\xc2\x97\xc3\xad\xc2\xa4s-\xc3\xa2\xc3\x85\xc2\x8a\xc3\x99\xc3\x98\xc2\x9a\xc2\x8b\xc3\xaa1o\xc2\x89\xc2\x8c\xc2\x8a]!\xc2\xa5\xc2\x90\xc2\x9b\xc2\xa4\xc2\x93a\xc2\x94\xc2\xb5\x1a\xc3\x8ad#>\x02\xc3\x87d:\xc2\x82\x07\xc3\xb884G\xc3\x85:\xc2\x93\r\xc2\xbfg\xc3\x99\xc2\x8aty\xc3\x94q\xc2\xbe\xc2\xa7\xc2\x98\xc3\xbdg\xc3\xb0\x05\xc2\x99{\xc2\x80\xc2\x8d\xc3\xbe1\n\xc3\xbagJ\xc2\x92\xc2\x97\xc3\x88\x16m\xc3\xb5\xc3\xa0\xc2\xab\x002\xc3\x99\xc2\x9aJ\xc3\x94o\x7f\xc2\xbf\xc2\x9d\xc2\x86\xc3\xa2\\\x10`Ak,\xc2\xb1;`\xc2\xa7R\x7fu\xc2\x89\xc3\xbc\xc3\xa5\xc2\x85\xc3\x91h\x00f\xc3\xb5\r\xc2\x86\xc3\xa2\xc2\x9f\xc2\xbaN\xc2\x9a\xc3\x93s\tF\xc3\xac\xc3\xa6\xc3\xa6\x0b\x13\xc3\xb3\xc2\x88t\xc3\xa6R\xc2\xaf\xc3\xa5%1\x02\x17\xc3\xb9_\xc2\xadH\xc3\xaa\xc2\xbe\x02\xc2\x8e\xc2\xb1\xc2\xa2\xc3\x80d\xc2\xbc\xc2\xb6\xc2\xa5d\xc3\x98\\\xc3\xae\xc3\xb7s\x02\xc2\xb6G\xc3\x8ea\n\xc3\x91O)*UI\xc3\xb2\x02\xc2\xa6\xc2\x83\xc2\x897n\xc3\xb4\xc3\xb2\xc3\xbc\xc3\x88\xc3\xbd\xc3\x97\xc2\x84;=TT\xc2\x9e\xc3\xb4r\ts\xc3\x8e\xc3\xa5\xc3\x81$\xc2\xaal=\x1c\xc2\x96L\x18(\xc3\x8d\xc3\xabpD\xc2\xa0_i\x03\xc2\xab\xc3\x8c(;\xc3\xac\xc2\x9aL\x01\x7f\xc2\xa6\\\x15\xc3\x9buE+\xc3\xb2\xc3\x97\xc2\x8c#\xc2\x94?\xc2\xbc\x01\x10\x13\xc3\xb3.\xc2\xa4\xc3\x83\xc3\x96\xc3\x8dw\xc2\xb4\xc2\xb2\x0b\x03\xc2\x9e\xc2\xb5\xc2\xab\xc2\xa4\xc2\x87\xc2\x94\xc3\xac\xc3\xbb!\xc3\xab\xc3\xab\xc3\x81\xc3\x8c~\xc2\x942d(\xc2\xaeH\xc2\x93\xc2\x95a\xc2\xbb\xc2\xa5U\xc2\xb4\xc2\x90I6\xc3\xbad~;\xc2\x86\x11\xc3\x83|l\xc2\xac62T9\x1a\xc3\x81\xc2\xbc\x04\xc2\x8eV\xc3\xb7t\xc2\x90\xc3\x9aQ\x10\xc3\x9b5\xc3\xa8st\xc2\xab`\xc2\x94\xc3\xbe\xc2\xa18\x13[\x18\xc2\x89\xc2\xa2\xc3\xb7\xc3\x9er\xc2\x8b\x12\x1b\x16\xc3\xbb\xc3\xa8\xc3\xa67\xc3\xb11c\x04\xc2\xa5E)Gl\x02\xc2\xa6\xc3\xa1\xc2\xa5\xc2\xa3|y\xc3\x9d\x07.~\xc3\xa9\x079\xc2\x9f\xc3\x9e\x02|\x13\xc2\xbf\xc3\x83\xc3\xafL\xc3\xb3_\xc3\xa6\xc2\x90\xc3\xb9\xc3\xbf\xc2\x87\x0el\xc2\xa7\x0eD*f@\xc2\x97\x0c\xc3\x9e~\xc3\xb0I\xc3\xbc\xc2\x9fF.\xc3\xb1\x11\xc3\xbd\xc2\x96zQ\xc3\x9f#\xc3\xbdP\xc2\xb6n\xc2\x8c\xc2\x95\x07:j\xc3\xbe\xc3\x91\xc3\xa5\x13\x00\xc2\xb9\xc2\x9e\xc2\x90\x0c\x00\x0e\xc3\x97\xc2\xac\xc2\x9d\xc2\xb9\xc3\x8f+@8\x1c3\xc2\xa3\xc3\x81\t\xc3\xa3\xc3\xbb\x1cC"\xc2\x95V\xc3\x82\xc2\xb1\xc3\xa4\xc2\xa3\xc3\x8cN.\xc2\xbf\x05i\x07&\xc2\x90:\xc2\x8b\xc2\xb4:#\xc3\x948\x11.\xc2\x9d7\xc2\xa0\xc3\xbd\xc3\xba+\xc2\xab\x0e3!T`\xc2\xb0>"Z\xc2\x93\xc2\xa7\xc2\x82.m\xc3\xa4\x1a\xc3\x93\xc2\x9a\xc3\x8d\xc2\xa91E\xc3\xb2\xc2\x8fZu\xc2\x9d\xc2\x96\xc2\x89\xc3\x85\x01\xc3\x94\xc3\x94\xc2\x8a\xc3\x8f\x164\xc2\xa2\x11\x15\xc3\xb99k\xc2\xaf!\x036\xc2\xb5\xc3\x8f\xc2\x9cX\x7f\xc2\xbci\xc2\xa1\xc2\x92\xc3\xa0\xc2\x94\xc2\x83y\xc3\xbd\xc2\xbe.Vv\xc2\x85\xc3\x9d\xc2\xaf\xc3\xa5\xc3\x83\xc2\xb7~\xc3\x81\xc3\xa0\xc2\x89\'#L\xc3\xa3-\xc3\xa3\xc3\xad\xc3\x86g\xc2\x9bW\xc3\x82\r\xc2\x91C\xc3\xb8`fb\xc2\x94\x03%\xc3\x90\xc3\x95\xc3\x84\xc3\x81\xc3\x8d\xc2\xb1\xc3\x90\x1b\xc3\x82)\xc2\x94\xc3\x83i\xc2\xb6\x1a;=\xc2\x9d\xc2\xb8\xc2\x89\xc3\xb0\n\xc2\xb8\xc2\xaf\xc2\x98y\xc3\x8b\xc3\x95n\xc3\x9f\xc3\xb4AQ\r\xc3\xa6\xc3\x89\x10K>$\xc3\x84r\r\xc3\xba\xc2\xbc\\\xc3\xa7AQ\r\xc3\xa6\xc3\x89\x10K>\xc3\xb1^\xc3\xadUQt\xc3\xbc\xc3\xbe\xc2\xb2?\xc2\x9c\xc3\x8f\xc2\x99\x13\x00\x0c\xc2\x877\xc3\xb6\xc3\xb2\xc2\xaa\xc3\x86y_ \\lw\xc2\x93y\x15\xc2\xbd\x7f)\xc3\x92\x1b\xc3\x80\xc3\xbd\xc3\xaa\xc3\xa7\xc3\xab\xc2\x90\x03\x19\xc2\xa2\xc2\xb4\xc3\x81\x11mm\xc3\xb5i\x15\xc3\xb3\xc3\xb9J\xc2\xb5\xc3\xab\xc2\x81?\xc3\x97\xc2\xbd@\x15H\xc3\xa3\xc2\xb0dv.)\xc3\x85p\xc3\xb0\xc2\x91q\xc3\x81I \xc2\xb6Ei\xc2\xa1\xc3\x83\xc3\xa7\xc2\xae\xc3\x9b\xc2\x8e*\x18\xc3\xbd\xc3\x94\xc3\x91\x1b\xc2\x99\xc2\x80\xc3\x8b\xc3\xa57:\xc3\x9a\xc3\xbe\xc3\x82\xc2\x80\x179w9\'p\xc3\x90\xc2\xb5\xc2\xa5\xc3\xae\xc3\x82I\xc2\xa6\xc2\xb6T\xc2\xa9\xc3\x9a\xc2\x90V\xc3\xb5m]\x1e\xc3\x87 \x1fKFm\x03\x7f1JY\xc3\xb2U\x17\x0c\x1f\xc3\x97\xc2\x91%\xc2\xb3\xc3\x97>C\xc2\xab4\x179w9\'p\xc3\x90\xc2\xb5\xc2\xa5\xc3\xae\xc3\x82I\xc2\xa6\xc2\xb6T\xc2\xa9\xc3\x9a\xc2\x90V\xc3\xb5m]\x1e\xc3\x87 \x1fKFm\x03\x7f1JY\xc3\xb2U\x17\x0c\x1f\xc3\x97\xc2\x91%\xc2\xb3\xc3\x97>C\xc2\xab4\x179w9\'p\xc3\x90\xc2\xb5\xc2\xa5\xc3\xae\xc3\x82I\xc2\xa6\xc2\xb6T\xc2\xa9\xc3\x9a\xc2\x90V\xc3\xb5m]\x1e\xc3\x87#\xc2\xba\\C\xc3\x81\xc2\x89|\xc2\xa6_]\xc3\x86V\n@\x1f|\xc2\xa5\xc3\xae\xc3\x82I\xc2\xa6\xc2\xb6T\xc2\xa9\xc3\x9a\xc2\x90V\xc3\xb5m]\x1e\xc3\x87#\xc2\xba\\C\xc3\x81\xc2\x89|\xc2\xa6\xc2\x85;4x\x19l\xc2\xbf\xc2\xbf\xc3\xa4\x02\xc3\xacc\x17Md\x16\xc3\xaem\x11\xc3\x86\xc2\x9b\xc2\x8a\x0f\xc2\x81V\x10.Y\nw\xc3\x9b\xc3\xad\xc3\xa0&\xc3\x88sy\x1do{\xc2\x83\x0b\xc3\x93Jv\'\xc3\x9ah\x0e\xc2\xb8\xc3\xabs\x05\xc2\xb0\xc2\xb8.b\x01\xc3\xa0\xc3\x87\xc2\xba\xc2\xb2\xc3\xa1\xc3\xadKqle\xc2\x96_\xc3\xa6\t\x1cM;\x0eq\xc3\x88\x18\x15\xc3\x90\xc2\x8e\xc2\x8c\xc2\xb1,[~\x10\xc3\x90\xc2\x8e\xc2\x8c\xc2\xb1,[~\x10+O\xc3\x947\x07:\xc3\x85Sa"_\xc3\xb5\x06>+\xc3\xa8\xc2\xaa8\xc3\xac \xc2\xa2\xc2\x81U\x17\xc2\xaf\xc3\x91.\x7f\xc3\x9eL\xc2\xa8-\x1eK\x1b\xc2\xaa\xc2\x92\x05t/\xc2\x82\xc3\x87qB\x08g\xc2\xb6N\xc2\x96\x10F\xc2\x835\xc2\x9a\x1d\x1a\xc2\x9e\x1b\xc3\x85\x04Q4\xc3\x80\xc3\x87\x10\x01\xc2\x947\xc3\x9bHfs\xc3\xa9\xc2\xa7\xc3\x94v\xc2\xbb@\x13-5\xc3\xafMK\x00.KyZ\xc3\x90\xc2\xad\x0f4\xc3\xbcD1\x06\xc2\xb0V\xc3\x9aA5\xc2\xac\xc2\x8cJR3\xc3\x85\n\xc3\xab/\xc3\x8a\xc2\x86\xc2\xa7\xc3\x9bxew\xc3\xab\xc3\x94\x7f3\xc3\xb5\xc2\xack?\xc2\xb2h\x18\x19\xc2\xb7FLx\xc2\x9e6\xc3\x9dQ@\xc3\x83\xc2\x98\xc2\x85\n\n\xc2\x9f\xc2\x83=\xc3\xa9J_\xc2\xb9CJR3\xc3\x85\n\xc3\xab/\xc3\x8a\xc2\x86\xc2\xa7\xc3\x9bxew\xc3\xab\xc3\x94lh\xc2\x88\xc3\xabu\xc3\xad\xc2\x85\xc2\xb2\x18\x19\xc2\xb7FLx\xc2\x9e6\\\xc2\x947\xc3\xbb\xc3\xa0\x11\xc2\xaf#\xc3\xad\xc2\xbcg~\xc2\x83\x00(\xc3\x94*\xc2\x88\xc2\xb4\x0e\x1f5\xc2\xa9QS\x06H\xc2\xa2m#\xc2\xa68\xc3\x88\xc3\x9bH\xc2\x93eU\xc3\xa2bn\x1e\xc2\xa95\xc2\x85wz\xc3\xba>\xc2\x8f"\x11f\xc2\x82\xc2\x9f~<\xc3\xa6\xc3\xa9\xc3\xbc\xc3\x8fc\x17\xc2\xad\xc2\xa0\xc2\x9e\x1d\xc3\xa0\xc3\x93\xc3\x82\xc3\x98W\xc2\x8a\xc3\xb0\xc3\xb5\xc2\x8b\x16\xc3\x98\xc2\xa4ya\xc3\xad\xc3\x8d\xc3\x9c\xc3\xb6\x11\'\x00\x11\xc2\xa4t\xc3\x9c\xc2\xa1\xc3\xa1IOv\xc3\x8c\xc2\xa7\xc3\x92>\r\xc2\x8f\xc3\xba\x01TL\xc2\x99\xc2\xb4+\xc2\x8ba\xc2\xac\xc3\x9c\xc2\x9d`\x1a{\xc3\xa7\xc3\x8e\x1f\xc3\x88(%\xc3\xa3\x0e\x7f\xc2\xb7-\xc2\x91\xc2\xae\xc2\xbc\xc3\x89\xc3\xb5.\xc3\x8b\xc2\xb7\xc3\x91\xc3\x88\xc3\xb5\xc2\x90\x00\xc3\xa1b\x01TL\xc2\x99\xc2\xb4+\xc2\x8ba\xc2\xac\xc3\x9c\xc2\x9d`\x1a{\xc3\xa7\xc3\x8e\x1f\xc3\x88(%\xc3\xa3\x0e\x7f\xc2\xb7\x01TL\xc2\x99\xc2\xb4+\xc2\x8ba\xc2\xac\xc3\x9c\xc2\x9d`\x1a{\xc3\xa7\xc3\x8e!\xc2\xb9\xc2\xa2y\xc2\xba\xc2\xbb\xc3\x87\xc3\xb8\xc2\xb0ul\xc3\xa1\xc3\x93\x7f\xc3\x9c\xc3\xa4\x18lN\xc3\x92\xc2\xa2\xc2\xb2k\xc3\x8a\xc2\xb8\xc3\x9c\xc3\x93Z\xc3\xa6\'\xc3\x85\xc2\x94\x14\xc3\x90\x1f\x7fDA\xc2\x93V'
+Tiempo transcurrido: 0.765204906463623 segundos
+
+     
+
+
+Mensaje original: Is this the real life?
+Is this just fantasy?
+Caught in a landside,
+No escape from reality
+Open your eyes,
+Look up to the skies and see,
+I'm just a poor boy, I need no sympathy,
+Because I'm easy come, easy go,
+Little high, little low,
+Any way the wind blows doesn't really matter to
+Me, to me
+Mamaaa,
+Just killed a man,
+Put a gun against his head, pulled my trigger,
+Now he's dead
+Mamaaa, life had just begun,
+But now I've gone and thrown it all away
+Mama, oooh,
+Didn't mean to make you cry,
+If I'm not back again this time tomorrow,
+Carry on, carry on as if nothing really matters
+Too late, my time has come,
+Sends shivers down my spine, body's aching all
+The time
+Goodbye, everybody, I've got to go,
+Gotta leave you all behind and face the truth
+Mama, oooh
+I don't want to die,
+I sometimes wish I'd never been born at all.
+I see a little silhouetto of a man,
+Scaramouch, Scaramouch, will you do the Fandango!
+Thunderbolts and lightning, very, very frightening me
+Galileo, Galileo
+Galileo, Galileo
+Galileo, Figaro - magnificoo
+I'm just a poor boy nobody loves me
+He's just a poor boy from a poor family,
+Spare him his life from this monstrosity
+Easy come, easy go, will you let me go
+Bismillah! No, we will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let me go) Will not let you go
+(Let me go)(Never) Never let you go
+(Let me go) (Never) let you go (Let me go) Ah
+No, no, no, no, no, no, no
+Oh mama mia, mama mia, mama mia, let me go
+Beelzebub has a devil put aside for me, for me,
+For meee
+So you think you can stop me and spit in my eye
+So you think you can love me and leave me to die
+Oh, baby, can't do this to me, baby,
+Just gotta get out, just gotta get right outta here
+Nothing really matters, Anyone can see,
+Nothing really matters,
+Nothing really matters to me
+Any way the wind blows...
+Opcion utilizada: ENCRIPTAR
+Metodo utilizado: BLOWFISH
+Llave utilizada: ingenieriautem2021
+Mensaje final: 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
+Tiempo transcurrido: 0.005001544952392578 segundos
+
+     
+
+
+Mensaje original: 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
+Opcion utilizada: DESENCRIPTAR
+Metodo utilizado: BLOWFISH
+Llave utilizada: ingenieriautem2021
+Mensaje final: Is this the real life?
+Is this just fantasy?
+Caught in a landside,
+No escape from reality
+Open your eyes,
+Look up to the skies and see,
+I'm just a poor boy, I need no sympathy,
+Because I'm easy come, easy go,
+Little high, little low,
+Any way the wind blows doesn't really matter to
+Me, to me
+Mamaaa,
+Just killed a man,
+Put a gun against his head, pulled my trigger,
+Now he's dead
+Mamaaa, life had just begun,
+But now I've gone and thrown it all away
+Mama, oooh,
+Didn't mean to make you cry,
+If I'm not back again this time tomorrow,
+Carry on, carry on as if nothing really matters
+Too late, my time has come,
+Sends shivers down my spine, body's aching all
+The time
+Goodbye, everybody, I've got to go,
+Gotta leave you all behind and face the truth
+Mama, oooh
+I don't want to die,
+I sometimes wish I'd never been born at all.
+I see a little silhouetto of a man,
+Scaramouch, Scaramouch, will you do the Fandango!
+Thunderbolts and lightning, very, very frightening me
+Galileo, Galileo
+Galileo, Galileo
+Galileo, Figaro - magnificoo
+I'm just a poor boy nobody loves me
+He's just a poor boy from a poor family,
+Spare him his life from this monstrosity
+Easy come, easy go, will you let me go
+Bismillah! No, we will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let him go!) Bismillah! We will not let you go
+(Let me go) Will not let you go
+(Let me go)(Never) Never let you go
+(Let me go) (Never) let you go (Let me go) Ah
+No, no, no, no, no, no, no
+Oh mama mia, mama mia, mama mia, let me go
+Beelzebub has a devil put aside for me, for me,
+For meee
+So you think you can stop me and spit in my eye
+So you think you can love me and leave me to die
+Oh, baby, can't do this to me, baby,
+Just gotta get out, just gotta get right outta here
+Nothing really matters, Anyone can see,
+Nothing really matters,
+Nothing really matters to me
+Any way the wind blows...
+Tiempo transcurrido: 0.0030090808868408203 segundos
+
+     
